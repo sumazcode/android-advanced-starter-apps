@@ -18,6 +18,7 @@ package com.example.android.localetext;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -86,11 +87,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle options menu item clicks here.
-        int id = item.getItemId();
-        if (id == R.id.action_help) {
-            Intent intent = new Intent(this, HelpActivity.class);
-            startActivity(intent);
-            return true;
+        switch (item.getItemId()) {
+            case R.id.action_help:
+                showHelp();
+                return true;
+            case R.id.action_language:
+                Intent languageIntent = new
+                        Intent(Settings.ACTION_LOCALE_SETTINGS);
+                startActivity(languageIntent);
+                return true;
+            default:
+                // Do nothing.
         }
         return super.onOptionsItemSelected(item);
     }

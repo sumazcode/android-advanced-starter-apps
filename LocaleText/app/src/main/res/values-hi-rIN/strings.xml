@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Meri recipe, meri bhasha mein</string>
+    <string name="action_help">Madad</string>
+    <string name="description">gaajar ka halava gaajar, cheenee kee chaashanee, bhune hue nats (baadaam, akharot, pista, kaajoo, kishamish), khova ya milkamid se bana ek svaadisht mithaee hai!</string>
+    <string name="action_language">Bhasha</string>
+</resources>
